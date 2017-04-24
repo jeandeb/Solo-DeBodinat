@@ -142,7 +142,7 @@ class GolfStrategy( Strategy ) :
   			return SoccerAction( Vector2D(), Vector2D() )
 
   		elif not prop.is_in_rect( zone_pos ) : 
-  			return prop.conduire( zone_pos, 1.5 ) 
+  			return prop.conduire( zone_pos, 0.5 ) 
     	
   		elif self.i <= len(zones)-1:
   			self.i = self.i + 1
@@ -180,7 +180,7 @@ class SlalomStrategy( Strategy ) :
 
 
   		zone_pos = zones[self.i].position + Vector2D( zones[self.i].l, zones[self.i].l )/2
-  		
+
   		if not prop.is_in_rect( zone_pos ) : 
   			return prop.conduire( zone_pos, 0.5 ) 
     	
