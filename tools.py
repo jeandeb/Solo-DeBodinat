@@ -180,14 +180,8 @@ class SlalomStrategy( Strategy ) :
 
 
   		zone_pos = zones[self.i].position + Vector2D( zones[self.i].l, zones[self.i].l )/2
-
-  		if prop.my_vitesse.norm <= 0.01 and prop.ball_vitesse.norm == 0.01 :
-  			return prop.go_ball 
-
-  		if (zone_pos - prop.ball_position).norm < 10 : 
-  			return SoccerAction( Vector2D(), Vector2D() )
-
-  		elif not prop.is_in_rect( zone_pos ) : 
+  		
+  		if not prop.is_in_rect( zone_pos ) : 
   			return prop.conduire( zone_pos, 0.5 ) 
     	
   		elif self.i <= len(zones):

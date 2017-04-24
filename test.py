@@ -8,7 +8,7 @@ team2 = strategy.SoccerTeam( name = "MFC", login = "etu2" )
 team1.add( "Woods", tools.SlalomStrategy() )
 team2.add( "Rien", tools.StaticStrategy() )
 
-simu = golf.Parcours4( team1=team1, vitesse = 0.01 )
+simu = golf.Parcours4( team1=team1, vitesse = 0.5 )
 #Jouer et afficher la partie
 strategy.show_simu( simu )
 #Jouer sans afficher
